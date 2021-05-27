@@ -4,10 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.example.saap.R
 
 class HomeFragment : Fragment() {
@@ -26,6 +28,9 @@ class HomeFragment : Fragment() {
         homeViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
+        root.findViewById<Button>(R.id.move_to_heroes_button).setOnClickListener {
+            findNavController().navigate(R.id.action_to_heroes)
+        }
         return root
     }
 }
