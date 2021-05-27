@@ -28,7 +28,8 @@ class MainActivity : AppCompatActivity() {
             if (
                 destination.id == R.id.navigation_heroes ||
                 destination.id == R.id.marvelFragment ||
-                destination.id == R.id.dcFragment
+                destination.id == R.id.dcFragment ||
+                destination.id == R.id.secondFragment
             ) {
                 navView.visibility = View.GONE
             } else {

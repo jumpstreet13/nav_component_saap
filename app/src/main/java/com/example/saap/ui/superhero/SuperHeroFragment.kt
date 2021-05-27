@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.example.saap.R
 
 class SuperHeroFragment : Fragment() {
@@ -18,7 +18,7 @@ class SuperHeroFragment : Fragment() {
     ): View? {
         val root = inflater.inflate(R.layout.fragment_hero, container, false)
 
-        val navController = requireActivity().findNavController(R.id.nav_host_fragment)
+        val navController = findNavController()
 
         root.findViewById<Button>(R.id.button).setOnClickListener {
             navController.navigate(R.id.action_navigation_heroes_to_marvelFragment)

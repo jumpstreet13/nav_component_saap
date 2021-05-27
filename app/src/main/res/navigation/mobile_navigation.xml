@@ -13,16 +13,19 @@
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_to_heroes"
-            app:destination="@id/heroes_navigation"
-            app:popUpTo="@id/heroes_navigation"
-            app:popUpToInclusive="true" />
+            app:destination="@id/heroes_navigation" />
+        <action
+            android:id="@+id/action_navigation_home_to_secondFragment"
+            app:destination="@id/secondFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.example.saap.ui.dashboard.DashboardFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dashboard">
+
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_notifications"
@@ -44,6 +47,8 @@
             <action
                 android:id="@+id/action_navigation_heroes_to_dcFragment"
                 app:destination="@id/dcFragment" />
+
+            <deepLink app:uri="ruleTheGalaxy://heroes" />
         </fragment>
         <fragment
             android:id="@+id/marvelFragment"
@@ -55,4 +60,8 @@
             android:name="com.example.saap.ui.superhero.dc.DcFragment" />
     </navigation>
 
+    <fragment
+        android:id="@+id/secondFragment"
+        android:label="SecondFragment"
+        android:name="com.example.saap.SecondFragment" />
 </navigation>

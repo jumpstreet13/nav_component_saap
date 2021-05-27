@@ -31,6 +31,9 @@ class HomeFragment : Fragment() {
         root.findViewById<Button>(R.id.move_to_heroes_button).setOnClickListener {
             findNavController().navigate(R.id.action_to_heroes)
         }
+        root.findViewById<Button>(R.id.move_to_second_fragment).setOnClickListener {
+            findNavController().navigate(R.id.action_navigation_home_to_secondFragment)
+        }
         return root
     }
 }
