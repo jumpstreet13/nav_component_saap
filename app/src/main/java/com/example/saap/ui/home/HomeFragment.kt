@@ -35,6 +35,9 @@ class HomeFragment : Fragment() {
             val action = HomeFragmentDirections.actionNavigationHomeToSecondFragment(10, "Number of my fails")
             findNavController().navigate(action)
         }
+        root.findViewById<Button>(R.id.move_to_dialog_fragment).setOnClickListener {
+            findNavController().navigate(R.id.action_navigation_home_to_coolDialog)
+        }
         return root
     }
 }

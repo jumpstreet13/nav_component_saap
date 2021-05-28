@@ -23,6 +23,9 @@
         <action
             android:id="@+id/action_navigation_home_to_navigation_dashboard"
             app:destination="@id/navigation_dashboard" />
+        <action
+            android:id="@+id/action_navigation_home_to_coolDialog"
+            app:destination="@id/coolDialog" />
     </fragment>
 
     <fragment
@@ -82,4 +85,9 @@
             android:name="title"
             app:argType="string" />
     </fragment>
+
+    <dialog
+        android:id="@+id/coolDialog"
+        android:label="CoolDialog"
+        android:name="com.example.saap.CoolDialog" />
 </navigation>
