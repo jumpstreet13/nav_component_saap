@@ -32,7 +32,8 @@ class HomeFragment : Fragment() {
             findNavController().navigate(R.id.action_to_heroes)
         }
         root.findViewById<Button>(R.id.move_to_second_fragment).setOnClickListener {
-            findNavController().navigate(R.id.action_navigation_home_to_secondFragment)
+            val action = HomeFragmentDirections.actionNavigationHomeToSecondFragment(10, "Number of my fails")
+            findNavController().navigate(action)
         }
         return root
     }

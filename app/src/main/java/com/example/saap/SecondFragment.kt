@@ -11,10 +11,12 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 
 class SecondFragment : Fragment() {
 
     private lateinit var notificationsViewModel: SecondFragmentViewModel
+    private val args by navArgs<SecondFragmentArgs>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -27,6 +29,9 @@ class SecondFragment : Fragment() {
         val textView: TextView = root.findViewById(R.id.text_second)
         notificationsViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
+            val text = "${args.title} ${args.myArg}"
+
+            textView.text = text
         })
 
         root.findViewById<Button>(R.id.to_heroes).setOnClickListener {
