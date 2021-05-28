@@ -69,11 +69,6 @@
             android:name="com.example.saap.ui.superhero.dc.DcFragment" />
     </navigation>
 
-    <!--  <dialog
-          android:id="@+id/myDialog"
-          android:label="MyDialog"
-          android:name="com.android.samples.navdialogsample.MyDialog" />-->
-
     <fragment
         android:id="@+id/secondFragment"
         android:label="SecondFragment"
